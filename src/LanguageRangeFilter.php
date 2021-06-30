@@ -82,7 +82,7 @@ class LanguageRangeFilter
 		if (\strcasecmp($this->stringForm, $ts) != 0)
 			return false;
 
-		if ($tl > $this->stringForm &&
+		if ($tl > $this->stringLength &&
 			\substr($ts, $this->stringLength, 1) != '-')
 			return false;
 		return true;
